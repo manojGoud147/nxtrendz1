@@ -1,0 +1,2 @@
+create table if not exists Product(productId int primary key AUTO_INCREMENT, productName TEXT, price double);
+create table if not exists review(reviewId int primary key AUTO_INCREMENT, reviewContent TEXT,rating int, productId int, foreign key(productId) references product(productId));
